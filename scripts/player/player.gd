@@ -35,7 +35,7 @@ func _physics_process(delta: float) -> void:
 		"move_back"
 	)
 
-	var direction := (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
+	var direction := (global_transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 
 	if direction:
 		velocity.x = direction.x * speed
